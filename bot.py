@@ -8,7 +8,7 @@ WEATHER_API_KEY = '2dc867c56d186c5c35dde2ce42c54dab'
 
 bot = telebot.TeleBot(BOT_TOKEN)
 
-# ПУТЬ К КАРТИНКЕ (ФАЙЛ ДОЛЖЕН ЛЕЖАТЬ В ТОЙ ЖЕ ПАПКЕ, ГДЕ bot.py)
+# ПУТЬ К КАРТИНКЕ 
 CUSTOM_IMAGE_PATH = 'logo.jpg'
 
 CITY_TRANSLATE = {
