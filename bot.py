@@ -7,8 +7,8 @@ WEATHER_API_KEY = '2dc867c56d186c5c35dde2ce42c54dab'
 
 bot = telebot.TeleBot(BOT_TOKEN)
 
-# ПУТЬ К ТВОЕЙ КАРТИНКЕ (ФАЙЛ ДОЛЖЕН БЫТЬ В ПАПКЕ С БОТОМ)
-CUSTOM_IMAGE_PATH = r'C:\Users\User\Documents\weather_logo.jpg\logo.jpg'  # или .jpg
+# ПУТЬ К КАРТИНКЕ
+CUSTOM_IMAGE_PATH = r'CUSTOM_IMAGE_PATH = 'logo.jpg''  # или .jpg
 
 CITY_TRANSLATE = {
     'астана': 'Astana',
@@ -121,7 +121,7 @@ def get_weather(message):
             days[date_key] = []
         days[date_key].append(item)
 
-    # Формируем текст
+    # Формировка текста
     reply = f'🌤 Прогноз погоды в {city.capitalize()} на неделю:\n\n'
     count = 0
     for date, items in days.items():
@@ -151,7 +151,7 @@ def get_weather(message):
         reply += f'🌅 Рассвет: {sunrise}\n'
         reply += f'🌇 Закат: {sunset}\n'
 
-    # --- ОТПРАВЛЯЕМ ТВОЮ КАРТИНКУ + ТЕКСТ ---
+    # --- ОТПРАВЛЯЕМ КАРТИНКУ + ТЕКСТ ---
     try:
         with open(CUSTOM_IMAGE_PATH, 'rb') as photo:
             bot.send_photo(
